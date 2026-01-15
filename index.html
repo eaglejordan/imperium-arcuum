@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imperium Arcuum</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:#f6f3ee;
+  color:#2b2b2b;
+}
+header{
+  background:url("images/arcos-poster.png") center/cover no-repeat;
+  color:white;
+  padding:4rem 2rem;
+  text-align:center;
+}
+header h1{
+  font-size:3rem;
+  margin-bottom:0.5rem;
+}
+header p{
+  font-size:1.3rem;
+}
+nav{
+  background:#2f2f2f;
+  padding:1rem;
+  text-align:center;
+}
+nav a{
+  color:white;
+  margin:0 1rem;
+  text-decoration:none;
+  font-weight:bold;
+}
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:3rem 2rem;
+}
+h2{
+  border-bottom:3px solid #7a1f1f;
+  padding-bottom:0.5rem;
+}
+.card{
+  background:white;
+  padding:1.5rem;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom:1.5rem;
+}
+button.toggle{
+  width:100%;
+  background:#7a1f1f;
+  color:white;
+  border:none;
+  padding:1rem;
+  font-size:1.1rem;
+  cursor:pointer;
+  border-radius:6px;
+  text-align:left;
+}
+.content{
+  display:none;
+  padding-top:1rem;
+}
+.cta{
+  background:#7a1f1f;
+  color:white;
+  padding:2rem;
+  text-align:center;
+  border-radius:10px;
+}
+footer{
+  background:#2f2f2f;
+  color:white;
+  text-align:center;
+  padding:2rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Imperium Arcuum</h1>
+  <p>Arcos romanos educativos para aprender Historia de forma activa</p>
+</header>
+
+<nav>
+  <a href="#productos">Arcos</a>
+  <a href="#educativo">Educación</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="productos">
+  <h2>Nuestros arcos</h2>
+
+  <div class="card">
+    <button class="toggle">🏹 Arco Romano Escolar</button>
+    <div class="content">
+      <p>Diseñado para uso en institutos y talleres educativos.</p>
+      <ul>
+        <li>Potencia baja y segura</li>
+        <li>Madera tratada</li>
+        <li>Ideal para secundaria</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="toggle">🏹 Arco Romano Reforzado</button>
+    <div class="content">
+      <p>Para recreaciones históricas y proyectos avanzados.</p>
+      <ul>
+        <li>Más resistencia</li>
+        <li>Uso supervisado</li>
+        <li>Contexto histórico realista</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="educativo">
+  <h2>Enfoque educativo</h2>
+  <p>
+    Imperium Arcuum permite al alumnado **aprender haciendo**,
+    conectando la Historia de Roma con la experiencia práctica.
+  </p>
+  <ul>
+    <li>Historia y Cultura Clásica</li>
+    <li>Educación Física (controlada)</li>
+    <li>Proyectos interdisciplinarios</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="card">
+    <button class="toggle">¿Son seguros para el alumnado?</button>
+    <div class="content">
+      <p>Sí. Los arcos están diseñados para uso educativo, con flechas sin punta y potencia reducida.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="toggle">¿A partir de qué edad?</button>
+    <div class="content">
+      <p>Recomendado a partir de 12 años, siempre con supervisión docente.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="toggle">¿Se pueden usar en clase?</button>
+    <div class="content">
+      <p>Sí, son ideales para demostraciones, talleres y proyectos didácticos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="cta">
+    <h2>Contacto y pedidos</h2>
+    <p>📧 imperiumarcuum@gmail.com</p>
+    <p>Pedidos exclusivos para centros educativos</p>
+  </div>
+</section>
+
+<footer>
+  © Imperium Arcuum · Proyecto educativo
+</footer>
+
+<script>
+document.querySelectorAll(".toggle").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const content = btn.nextElementSibling;
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+</body>
+</html>
